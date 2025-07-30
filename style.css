@@ -1,0 +1,72 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* MY DASHBOARD GRID LAYOUT */
+.main-container {
+    display: grid;
+    height: 100vh;
+    max-width: 100%;
+    grid-auto-flow: row;
+    grid-template-columns:  1fr 4.5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar contents";
+        & > .header {
+            grid-area: header;
+            background-color: rgb(124, 201, 124);
+        }
+        & > .sidebar {
+            grid-area: sidebar;
+            background-color: rgb(99, 255, 255);
+        }
+        & > .sub-contents {
+            grid-area: contents;
+            background-color: rgb(170, 168, 168);
+            padding: 15px;
+        }
+}
+
+/* BRB, LUTO LANG FOOD, AND THEN PAKAININ SI ELLIE */
+
