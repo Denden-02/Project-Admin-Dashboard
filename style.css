@@ -48,25 +48,28 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
     max-width: 100%;
     grid-auto-flow: row;
-    grid-template-columns:  1fr 4.5fr;
+    grid-template-columns:  1fr 3.5fr 1fr;
     grid-template-rows: 1fr 5fr;
     grid-template-areas: 
-        "sidebar header"
-        "sidebar contents";
+        "sidebar header header"
+        "sidebar contents right-sidebar";
         & > .header {
             grid-area: header;
-            background-color: rgb(124, 201, 124);
+            background-color: white;
         }
         & > .sidebar {
             grid-area: sidebar;
-            background-color: rgb(99, 255, 255);
+            background-color: rgb(255, 150, 150);
         }
-        & > .sub-contents {
+        & > .contents {
             grid-area: contents;
-            background-color: rgb(170, 168, 168);
+            background-color: rgb(204, 204, 204);
             padding: 15px;
         }
+        & > .right-sidebar {
+            grid-area: right-sidebar;
+            background-color: rgb(255, 241, 162);
+        }
 }
-
-/* BRB, LUTO LANG FOOD, AND THEN PAKAININ SI ELLIE */
+ 
 
