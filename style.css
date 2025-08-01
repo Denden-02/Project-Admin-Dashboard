@@ -29,6 +29,7 @@ img, picture, video, canvas, svg {
 
 input, button, textarea, select {
   font: inherit;
+  height: 1.75rem;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 /* MY DASHBOARD GRID LAYOUT */
 .main-container {
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     grid-auto-flow: row;
     grid-template-columns:  1fr 3.5fr 1fr;
@@ -72,4 +73,48 @@ h1, h2, h3, h4, h5, h6 {
         }
 }
  
+/* POSITION EVERY DIV USING GRID TOMORROW, all lock in on positioning and arrangement August 1, 2025 */
 
+.header {
+  /* border: 5px solid green; */
+  display: grid;
+  padding: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  grid-template-areas: 
+    "sub-header1"
+    "sub-header2";
+    & > .sub-header1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 100px;
+      /* border: 3px solid orange; */
+        & > .searchbar, .top-right-prof {
+          padding: 0 2.5rem 0 1.25rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 35px;
+        }
+    }
+    & > .sub-header2 {
+      padding: 0 2.5rem 0 1.25rem;
+      display: grid;
+      grid-area: sub-header2;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 100px;
+        & > .hi-there-profile {
+            line-height: calc(1em + 0.5rem);
+            padding-left: 1.25rem;
+        }
+        & > .nav-sharing {
+          padding-left: 1.25rem;
+          display: flex;
+          justify-content: flex-end;
+          gap: 35px;
+          list-style-type: none;
+          align-items: center;
+        }
+    }
+}
