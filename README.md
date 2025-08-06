@@ -1,5 +1,5 @@
 # Project-Admin-Dashboard
-last project of intermmediate HTML &amp; CSS
+last project of intermmediate HTML & amp; CSS
 
 MY PROJECT PSEUDOCODE:
 
